@@ -3,7 +3,7 @@
 
 fullName: "Rahul Raj Pandey"
 shortRole: "7x Google Cloud Architect"
-headline: "AI/ML Engineer & Cloud Engineer @ Econz | 7x Certified Professional | Cloud Solutions | Agentic AI"
+headline: "AI/ML Engineer @ Econz | 7x Certified Professional | Cloud Solutions | Agentic AI"
 bio: "Cloud Solution Engineer dedicated to building scalable, intelligent infrastructure. From driving Presales conversations to leading end-to-end technical delivery, I focus on designing Agentic solutions that solve real-world business challenges at scale."
 
 skills:
@@ -14,18 +14,20 @@ skills:
     - "Google Cloud Platform (GCP)"
     - "Python"
     - "TensorFlow"
-    - "Cloud Architecture Design"
+    - "Solution Architecture"
     - "Kubernetes"
     - "MLOps"
     - "System Design"
     - "Infrastructure Migration"
-  
+
   strategicCompetencies:
     - "Cross-functional Leadership"
     - "Customer Engineering"
     - "Technical PreSales"
     - "Problem Solving"
     - "Project Management"
+    - "Technical Account Management"
+
   certifications:
     - "Professional Machine Learning Engineer Certification - GCP"
     - "Professional Cloud Architect - GCP"
