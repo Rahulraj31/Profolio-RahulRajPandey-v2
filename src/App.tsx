@@ -15,9 +15,6 @@ import ExperienceItem from "./components/ExperienceItem";
 import { PortfolioData } from "./types";
 import yaml from "js-yaml";
 
-const CACHE_KEY = "portfolio_data_cache_v16";
-const CACHE_EXPIRY = 24 * 60 * 60 * 1000; // 24 hours
-
 console.log("App Version: v16");
 
 export default function App() {
@@ -41,28 +38,15 @@ export default function App() {
     }
   };
 
-  const fetchData = async (force = false) => {
+  const fetchData = async () => {
     setLoading(true);
     try {
-      if (!force) {
-        const cached = localStorage.getItem(CACHE_KEY);
-        if (cached) {
-          const { data: cachedData, timestamp } = JSON.parse(cached);
-          if (Date.now() - timestamp < CACHE_EXPIRY) {
-            setData(cachedData);
-            setLoading(false);
-            return;
-          }
-        }
-      }
-
       const response = await fetch(`/portfolio.yaml?t=${Date.now()}`);
       if (response.ok) {
         const yamlText = await response.text();
         const yamlData = yaml.load(yamlText) as PortfolioData;
         if (yamlData && yamlData.fullName) {
           setData(yamlData);
-          localStorage.setItem(CACHE_KEY, JSON.stringify({ data: yamlData, timestamp: Date.now() }));
         }
       }
     } catch (error) {
@@ -83,7 +67,7 @@ export default function App() {
           Failed to load portfolio data.
         </p>
         <button 
-          onClick={() => fetchData(true)}
+          onClick={() => fetchData()}
           className="px-8 py-4 glass rounded-full font-semibold hover:bg-white/10 transition-colors"
         >
           Retry Loading

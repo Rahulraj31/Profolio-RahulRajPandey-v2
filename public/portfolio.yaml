@@ -1,20 +1,19 @@
 # Rahul Raj Portfolio Configuration
 # Update this file to change any content on the website
 
-fullName: "Rahul Raj"
+fullName: "Rahul Raj Pandey"
 shortRole: "7x Google Cloud Architect"
 headline: "AI/ML Engineer & Cloud Engineer @ Econz | 7x Certified Professional | Cloud Solutions | Agentic AI"
-bio: "Bridging the gap between AI research and production-grade reality. 7x Google Cloud Certified Architect at Econz, architecting Agentic AI and GenAI ecosystems that drive measurable ROI."
+bio: "Cloud Solution Engineer dedicated to building scalable, intelligent infrastructure. From driving Presales conversations to leading end-to-end technical delivery, I focus on designing Agentic solutions that solve real-world business challenges at scale."
 
 skills:
   technical:
     - "Generative AI"
-    - "Large Language Models (LLMs)"
+    - "Agentic AI"
+    - "Machine/Deep Learning"
     - "Google Cloud Platform (GCP)"
     - "Python"
     - "TensorFlow"
-    - "Google ADK"
-    - "Machine/Deep Learning"
     - "Cloud Architecture Design"
     - "Kubernetes"
     - "MLOps"
@@ -95,5 +94,5 @@ contact:
   medium: "https://medium.com/@pandeyrahulraj99"
   kaggle: "https://www.kaggle.com/rahulraj31"
 
-profileImage: "/profile.jpg"
+profileImage: "profile.jpg"
 fallbackProfileImage: "https://avatars.githubusercontent.com/u/62799332?v=4"
