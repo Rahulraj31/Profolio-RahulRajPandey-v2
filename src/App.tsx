@@ -9,14 +9,13 @@ import { Github, Linkedin, Mail, Twitter, ExternalLink, Code, BookOpen, User, Se
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Section from "./components/Section";
-import ProjectCard from "./components/ProjectCard";
 import ArticleCard from "./components/ArticleCard";
 import ExperienceItem from "./components/ExperienceItem";
 import { PortfolioData } from "./types";
 import yaml from "js-yaml";
 import profilePic from "./assets/profile.jpg";
 
-console.log("App Version: v18");
+console.log("App Version: v19");
 
 export default function App() {
   const [data, setData] = useState<PortfolioData | null>(null);
@@ -142,7 +141,6 @@ export default function App() {
                 src={profilePic} 
                 alt={portfolio.fullName}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
               <div className="absolute bottom-8 left-8">
