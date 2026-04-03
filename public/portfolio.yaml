@@ -1,0 +1,99 @@
+# Rahul Raj Portfolio Configuration
+# Update this file to change any content on the website
+
+fullName: "Rahul Raj"
+shortRole: "7x Google Cloud Architect"
+headline: "AI/ML Engineer & Cloud Engineer @ Econz | 7x Certified Professional | Cloud Solutions | Agentic AI"
+bio: "Bridging the gap between AI research and production-grade reality. 7x Google Cloud Certified Architect at Econz, architecting Agentic AI and GenAI ecosystems that drive measurable ROI."
+
+skills:
+  technical:
+    - "Generative AI"
+    - "Large Language Models (LLMs)"
+    - "Google Cloud Platform (GCP)"
+    - "Python"
+    - "TensorFlow"
+    - "Google ADK"
+    - "Machine/Deep Learning"
+    - "Cloud Architecture Design"
+    - "Kubernetes"
+    - "MLOps"
+    - "System Design"
+    - "Infrastructure Migration"
+  
+  strategicCompetencies:
+    - "Cross-functional Leadership"
+    - "Customer Engineering"
+    - "Technical PreSales"
+    - "Problem Solving"
+    - "Project Management"
+  certifications:
+    - "Professional Machine Learning Engineer Certification - GCP"
+    - "Professional Cloud Architect - GCP"
+    - "Generative AI Leader Certification - GCP"
+    - "Generative AI Specialist (L400 Skill Badge) - GCP"
+    - "Maps Technical Credential - GMaps"
+    - "Cloud Digital Leader - GCP"
+    - "GWS Deployment Services Credential - GWS"
+    - "Deep Learning with TensorFlow - IBM"
+
+experience:
+  - company: "Econz IT Services"
+    role: "AI-ML Engineer"
+    dates: "Jul 2024 - Present"
+    achievements:
+      - "Spearheading the architectural design and development of innovative AI/ML and Generative AI solutions on Google Cloud Platform (GCP)."
+      - "Leading cross-functional teams to develop tailored AI/ML solutions that drive measurable business results and ROI."
+      - "Collaborating effectively with Google Account Managers and Customer Engineers to drive successful deal closures and project implementation."
+      - "Overseeing and driving the development of novel AI-ML & Generative AI-driven solutions for proof-of-concepts (POCs) and demonstrations."
+  - company: "Cloud Ace India"
+    role: "Cloud ML Engineer"
+    dates: "Aug 2023 - Jul 2024"
+    achievements:
+      - "Deployed a GenAI chatbot workflow using DialogFlow CX for a FinTech NBFC, improving customer satisfaction metrics by 38%."
+      - "Spearheaded re-platforming from AWS to automated GCP infrastructure (GKE, Workflows), yielding 20% cost optimization."
+      - "Architected AI-ML automation using CV & NLP for document classification, increasing back-office efficiency by 40%."
+      - "Successfully collaborated with Google AMs to secure strategic partnerships resulting in over $630,000 (26.3%) in closed deals."
+  - company: "Genpact"
+    role: "Data Scientist Intern"
+    dates: "Jan 2023 - Jun 2023"
+    achievements:
+      - "Performed R&D on model reliability and calibration for structured data machine learning models."
+      - "Conducted extensive experimentation on leveraging Generative AI for data forecasting and prediction."
+      - "Developed high-quality, production-grade reusable assets, streamlining development processes and promoting efficiency."
+  - company: "DRDO, Ministry of Defence"
+    role: "ML Engineering Intern"
+    dates: "May 2022 - Aug 2022"
+    achievements:
+      - "Researched and implemented Deep Learning methods for the Despeckling of SAR Images."
+      - "Worked on advanced signal processing and image enhancement techniques for defense applications."
+
+articles:
+  - title: "Beyond the Hype: Building Self-Route Architecture with Gemini and the Google ADK"
+    date: "2024"
+    summary: "A technical deep dive into building intelligent routing systems using Gemini's multimodal capabilities."
+    link: "https://medium.com/google-cloud/beyond-the-hype-building-self-route-architecture-with-gemini-and-the-google-adk-0c5ed875df1b"
+  - title: "Automating Google Cloud Access Audits: A Serverless Approach"
+    date: "2024"
+    summary: "How to leverage serverless functions to automate complex security audits on GCP."
+    link: "https://medium.com/google-cloud/automating-google-cloud-access-audits-a-serverless-approach-a21ff802c4a4"
+  - title: "Is RAG Dead? The Case for Long Context Windows in 2026"
+    date: "2026"
+    summary: "Analyzing the shift from RAG to long-context models and what it means for AI architecture."
+    link: "https://medium.com/@pandeyrahulraj99/is-rag-dead-the-case-for-long-context-windows-in-2026-adaf6b472856"
+
+education:
+  - school: "Vellore Institute of Technology"
+    degree: "Bachelor of Technology - BTech, Computer Science (AI & ML)"
+    dates: "Apr 2019 – Apr 2023"
+    grade: "8.88"
+
+contact:
+  email: "pandeyrahulraj99@gmail.com"
+  github: "https://github.com/Rahulraj31"
+  linkedin: "https://www.linkedin.com/in/rahulraj31/"
+  medium: "https://medium.com/@pandeyrahulraj99"
+  kaggle: "https://www.kaggle.com/rahulraj31"
+
+profileImage: "/profile.jpg"
+fallbackProfileImage: "https://avatars.githubusercontent.com/u/62799332?v=4"
