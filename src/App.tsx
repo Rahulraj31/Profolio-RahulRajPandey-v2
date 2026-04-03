@@ -14,6 +14,8 @@ import ExperienceItem from "./components/ExperienceItem";
 import { PortfolioData } from "./types";
 import yaml from "js-yaml";
 
+import profilePic from "./assets/profile.jpeg";
+
 console.log("App Version: v25");
 
 export default function App() {
@@ -138,7 +140,7 @@ export default function App() {
             <div className="relative glass rounded-[2.5rem] overflow-hidden aspect-[4/5] group hover:border-brand-500/50 hover:shadow-[0_0_40px_rgba(14,165,233,0.25)] transition-all duration-700">
               <div 
                 className="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                style={{ backgroundImage: 'url(/profile.jpg)' }}
+                style={{ backgroundImage: `url(${profilePic})` }}
                 role="img"
                 aria-label={portfolio.fullName}
               />
