@@ -29,12 +29,11 @@ A high-performance, modern professional portfolio built with **React 19**, **Vit
 
 ```text
 ├── public/
-│   ├── portfolio.yaml      # Main content configuration (Edit this!)
-│   ├── profile.jpg         # Profile image
-│   └── favicon.svg         # Site icon
+│   └── portfolio.yaml      # Main content configuration (Edit this!)
 ├── src/
 │   ├── components/         # Modular UI components (Navbar, Hero, Section, etc.)
-│   ├── assets/             # Local assets (images, styles)
+│   ├── assets/             # Local assets (profile.jpeg, styles)
+│   │   └── profile.jpeg    # Your Profile image
 │   ├── App.tsx             # Root application logic & data fetching
 │   ├── index.css           # Tailwind 4 configuration & global styles
 │   ├── types.ts            # TypeScript interfaces for portfolio data
@@ -79,7 +78,7 @@ bio: "Cloud Solution Engineer dedicated to building scalable..."
 ```
 
 ### 2. Profile Image
-Replace your photo at `public/profile.jpg` or update the path in `src/App.tsx`.
+Replace your photo at `src/assets/profile.jpeg`. The application imports this directly to ensure it works correctly with the Vite build pipeline.
 
 ## 🚢 Deployment
 
