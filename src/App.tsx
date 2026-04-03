@@ -25,15 +25,15 @@ export default function App() {
 
   useEffect(() => {
     if (data) {
-      setProfileImgSrc(data.profileImage || "/profile.jpg");
+      const img = data.profileImage || "/profile.jpg";
+      const formattedPath = img.startsWith('http') || img.startsWith('/') ? img : `/${img}`;
+      setProfileImgSrc(formattedPath);
     }
   }, [data]);
 
   const handleImageError = () => {
-    const fallback = data?.fallbackProfileImage || "https://avatars.githubusercontent.com/u/62799332?v=4";
-    console.log("Image load failed, switching to fallback:", fallback);
-    if (profileImgSrc !== fallback) {
-      setProfileImgSrc(fallback);
+    if (data?.fallbackProfileImage && profileImgSrc !== data.fallbackProfileImage) {
+      setProfileImgSrc(data.fallbackProfileImage);
       setMainImageFailed(true);
     }
   };
@@ -166,9 +166,6 @@ export default function App() {
               <div className="absolute bottom-8 left-8">
                 <p className="text-white font-display font-bold text-2xl tracking-tighter">RR<span className="text-brand-400">.</span></p>
                 <p className="text-zinc-400 font-mono text-[10px] uppercase tracking-widest">{portfolio.shortRole || "7x Google Cloud Architect"}</p>
-                {mainImageFailed && (
-                  <p className="text-brand-400/60 font-mono text-[8px] uppercase tracking-widest mt-2">Main image failed to load</p>
-                )}
               </div>
             </div>
           </div>
