@@ -14,58 +14,13 @@ import ArticleCard from "./components/ArticleCard";
 import ExperienceItem from "./components/ExperienceItem";
 import { PortfolioData } from "./types";
 import yaml from "js-yaml";
+import profilePic from "./assets/profile.jpg";
 
-console.log("App Version: v17");
+console.log("App Version: v18");
 
 export default function App() {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [mainImageFailed, setMainImageFailed] = useState(false);
-  const [profileImgSrc, setProfileImgSrc] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (data) {
-      const img = data.profileImage || "profile.jpg";
-      // Robust path resolution for Vite:
-      // 1. If it's a full URL, use it.
-      // 2. If it's a root-relative path, ensure it works with BASE_URL.
-      // 3. Otherwise, prepend BASE_URL.
-      let formattedPath = img;
-      if (!img.startsWith('http')) {
-        try {
-          // Resolve relative to BASE_URL and current origin
-          const base = new URL(import.meta.env.BASE_URL, window.location.origin);
-          const resolved = new URL(img.replace(/^\//, ''), base);
-          formattedPath = resolved.href;
-        } catch (e) {
-          const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
-          const cleanImg = img.replace(/^\//, '');
-          formattedPath = `${baseUrl}/${cleanImg}`;
-        }
-      }
-      console.log("[Image Debug] Setting profile image path:", formattedPath);
-      setProfileImgSrc(formattedPath);
-    }
-  }, [data]);
-
-  const handleImageError = () => {
-    const fallback = data?.fallbackProfileImage;
-    const secondaryFallback = "https://github.com/Rahulraj31.png";
-    
-    console.warn("[Image Debug] Profile image failed to load. Current src:", profileImgSrc);
-    
-    if (fallback && profileImgSrc !== fallback) {
-      console.log("[Image Debug] Switching to primary fallback:", fallback);
-      setProfileImgSrc(fallback);
-      setMainImageFailed(true);
-    } else if (profileImgSrc !== secondaryFallback) {
-      console.log("[Image Debug] Switching to secondary fallback (GitHub Avatar):", secondaryFallback);
-      setProfileImgSrc(secondaryFallback);
-      setMainImageFailed(true);
-    } else {
-      console.error("[Image Debug] All image fallbacks failed.");
-    }
-  };
 
   const fetchData = async () => {
     setLoading(true);
@@ -184,12 +139,10 @@ export default function App() {
             <div className="absolute -inset-4 bg-brand-500/10 rounded-[2.5rem] blur-3xl" />
             <div className="relative glass rounded-[2.5rem] overflow-hidden aspect-[4/5] group hover:border-brand-500/50 hover:shadow-[0_0_40px_rgba(14,165,233,0.25)] transition-all duration-700">
               <img 
-                key={profileImgSrc || "loading"}
-                src={profileImgSrc || undefined} 
+                src={profilePic} 
                 alt={portfolio.fullName}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-                onError={handleImageError}
-                crossOrigin="anonymous"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
               <div className="absolute bottom-8 left-8">
