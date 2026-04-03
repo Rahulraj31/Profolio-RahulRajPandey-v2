@@ -1,4 +1,4 @@
-# Rahul Raj Pandey - Professional Portfolio (v25)
+# Rahul Raj Pandey - Professional Portfolio 
 
 A high-performance, modern professional portfolio built with **React 19**, **Vite 6**, and **Tailwind CSS 4**. This project is completely content-driven via a YAML configuration, allowing for instant updates to experience, skills, and certifications without modifying the React architecture.
 
@@ -48,7 +48,7 @@ To run this project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Rahulraj31/Profolio-RahulRajPandey-v2.git
    cd Profolio-RahulRajPandey-v2
    ```
 
