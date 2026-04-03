@@ -1,6 +1,6 @@
 # Rahul Raj Pandey - Professional Portfolio (v25)
 
-A modern, high-performance professional portfolio built with **React**, **Vite**, and **Tailwind CSS**. This portfolio is designed to be content-driven, using a YAML configuration for easy updates without touching the code.
+A high-performance, modern professional portfolio built with **React 19**, **Vite 6**, and **Tailwind CSS 4**. This project is completely content-driven via a YAML configuration, allowing for instant updates to experience, skills, and certifications without modifying the React architecture.
 
 **Live Website:** [https://rahulraj31.vercel.app/](https://rahulraj31.vercel.app/)
 
@@ -8,45 +8,49 @@ A modern, high-performance professional portfolio built with **React**, **Vite**
 
 ## 🚀 Key Features
 
-- **YAML-Driven Content:** All text, skills, experience, and project data are managed via `/public/portfolio.yaml`.
-- **Modern UI/UX:** Clean, dark-themed aesthetic with "glassmorphism" effects.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
-- **Interactive Elements:** Smooth animations using `framer-motion` and glowing hover effects.
-- **Fast Performance:** Built with Vite for near-instant load times.
-- **Easy Deployment:** Optimized for Vercel and other modern hosting platforms.
+- **YAML-Driven Architecture:** All content (skills, experience, projects, contact) is managed via `/public/portfolio.yaml`.
+- **GCP & AI Focused:** Highlighting expertise as a 7x Google Cloud Architect and AI/ML Engineer.
+- **Modern UI/UX:** Premium dark-themed aesthetic with Glassmorphism, hardware-accelerated animations, and responsive layouts.
+- **Interactive Elements:** Smooth transitions using `motion/react` (Framer Motion v12) and dynamic glowing hover effects.
+- **Tailwind 4 Engine:** Utilizing the latest performance-first CSS engine for ultra-fast styling.
+- **Performance Optimized:** Near-instant load times powered by Vite.
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React 18
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide React
-- **Animations:** Framer Motion (`motion/react`)
-- **Data Parsing:** `js-yaml`
+- **Frontend:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite 6](https://vite.dev/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [Motion](https://motion.dev/) (`motion/react`)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Data Parsing:** [js-yaml](https://github.com/nodeca/js-yaml)
+- **Content:** YAML (Static data loading)
 
 ## 📂 Project Structure
 
 ```text
 ├── public/
 │   ├── portfolio.yaml      # Main content configuration (Edit this!)
-│   └── profile.jpg         # Profile image (Served from public/)
+│   ├── profile.jpg         # Profile image
+│   └── favicon.svg         # Site icon
 ├── src/
-│   ├── components/         # Reusable UI components
-│   ├── App.tsx             # Main application logic
-│   ├── index.css           # Global styles & Tailwind imports
-│   └── types.ts            # TypeScript interfaces
-├── package.json            # Dependencies and scripts
-└── vite.config.ts          # Vite configuration
+│   ├── components/         # Modular UI components (Navbar, Hero, Section, etc.)
+│   ├── assets/             # Local assets (images, styles)
+│   ├── App.tsx             # Root application logic & data fetching
+│   ├── index.css           # Tailwind 4 configuration & global styles
+│   ├── types.ts            # TypeScript interfaces for portfolio data
+│   └── main.tsx            # Application entry point
+├── package.json            # Modern dependencies (React 19, etc.)
+└── vite.config.ts          # Optimized Vite build settings
 ```
 
 ## ⚙️ Local Setup
 
-To run this project locally, follow these steps:
+To run this project locally:
 
 1. **Clone the repository:**
    ```bash
    git clone <your-repo-url>
-   cd <repo-folder>
+   cd Profolio-RahulRajPandey-v2
    ```
 
 2. **Install dependencies:**
@@ -59,35 +63,31 @@ To run this project locally, follow these steps:
    npm run dev
    ```
 
-4. **Open in browser:**
-   Navigate to `http://localhost:3000` (or the port shown in your terminal).
+4. **Navigate to:** `http://localhost:3000`
 
 ## 📝 Customization
 
 ### 1. Update Content
-You don't need to touch the React code to update your profile. Simply edit the `/public/portfolio.yaml` file:
+The portfolio is designed for ease of use. Simply edit the `/public/portfolio.yaml` file:
 
 ```yaml
 fullName: "Rahul Raj Pandey"
 shortRole: "7x Google Cloud Architect"
 headline: "AI/ML Engineer & Cloud Engineer..."
 bio: "Cloud Solution Engineer dedicated to building scalable..."
-# ... update skills, experience, and contact info
+# ... update your skills, experience, and certifications
 ```
 
 ### 2. Profile Image
-To update your profile photo, replace the image at `public/profile.jpg`. The application uses a root-relative path to ensure it is correctly served across all environments (Vercel, GitHub Pages, etc.).
+Replace your photo at `public/profile.jpg` or update the path in `src/App.tsx`.
 
-## 🚢 Deployment (Vercel)
+## 🚢 Deployment
 
-This project is optimized for Vercel:
-
-1. Push your code to GitHub/GitLab/Bitbucket.
-2. Import the project into Vercel.
-3. Vercel will automatically detect Vite settings.
-4. Ensure the build command is `npm run build` and the output directory is `dist`.
-5. Deploy!
+Optimized for **Vercel** and **GitHub Pages**:
+1. Connect your repository.
+2. Build command: `npm run build`
+3. Output directory: `dist`
 
 ---
 
-Developed with ❤️ by [Rahul Raj Pandey](https://github.com/Rahulraj31)
+Developed with 💙 by [Rahul Raj Pandey](https://github.com/Rahulraj31)
