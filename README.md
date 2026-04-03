@@ -4,7 +4,7 @@ A modern, high-performance professional portfolio built with **React**, **Vite**
 
 **Live Website:** [https://rahulraj31.vercel.app/](https://rahulraj31.vercel.app/)
 
-![Portfolio Preview](https://picsum.photos/seed/portfolio/1200/630)
+
 
 ## 🚀 Key Features
 
