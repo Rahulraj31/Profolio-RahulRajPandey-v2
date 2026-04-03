@@ -25,15 +25,28 @@ export default function App() {
 
   useEffect(() => {
     if (data) {
-      const img = data.profileImage || "/profile.jpg";
-      const formattedPath = img.startsWith('http') || img.startsWith('/') ? img : `/${img}`;
+      const img = data.profileImage || "profile.jpg";
+      // Robust path resolution for Vite:
+      // 1. If it's a full URL, use it.
+      // 2. If it's a root-relative path, ensure it works with BASE_URL.
+      // 3. Otherwise, prepend BASE_URL.
+      let formattedPath = img;
+      if (!img.startsWith('http')) {
+        const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+        const cleanImg = img.replace(/^\//, '');
+        formattedPath = `${baseUrl}/${cleanImg}`;
+      }
+      console.log("Setting profile image path:", formattedPath);
       setProfileImgSrc(formattedPath);
     }
   }, [data]);
 
   const handleImageError = () => {
-    if (data?.fallbackProfileImage && profileImgSrc !== data.fallbackProfileImage) {
-      setProfileImgSrc(data.fallbackProfileImage);
+    const fallback = data?.fallbackProfileImage;
+    console.warn("Profile image failed to load. Current src:", profileImgSrc);
+    if (fallback && profileImgSrc !== fallback) {
+      console.log("Switching to fallback image:", fallback);
+      setProfileImgSrc(fallback);
       setMainImageFailed(true);
     }
   };
