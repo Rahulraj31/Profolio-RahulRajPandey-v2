@@ -15,7 +15,7 @@ import ExperienceItem from "./components/ExperienceItem";
 import { PortfolioData } from "./types";
 import yaml from "js-yaml";
 
-console.log("App Version: v16");
+console.log("App Version: v17");
 
 export default function App() {
   const [data, setData] = useState<PortfolioData | null>(null);
@@ -32,22 +32,38 @@ export default function App() {
       // 3. Otherwise, prepend BASE_URL.
       let formattedPath = img;
       if (!img.startsWith('http')) {
-        const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
-        const cleanImg = img.replace(/^\//, '');
-        formattedPath = `${baseUrl}/${cleanImg}`;
+        try {
+          // Resolve relative to BASE_URL and current origin
+          const base = new URL(import.meta.env.BASE_URL, window.location.origin);
+          const resolved = new URL(img.replace(/^\//, ''), base);
+          formattedPath = resolved.href;
+        } catch (e) {
+          const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+          const cleanImg = img.replace(/^\//, '');
+          formattedPath = `${baseUrl}/${cleanImg}`;
+        }
       }
-      console.log("Setting profile image path:", formattedPath);
+      console.log("[Image Debug] Setting profile image path:", formattedPath);
       setProfileImgSrc(formattedPath);
     }
   }, [data]);
 
   const handleImageError = () => {
     const fallback = data?.fallbackProfileImage;
-    console.warn("Profile image failed to load. Current src:", profileImgSrc);
+    const secondaryFallback = "https://github.com/Rahulraj31.png";
+    
+    console.warn("[Image Debug] Profile image failed to load. Current src:", profileImgSrc);
+    
     if (fallback && profileImgSrc !== fallback) {
-      console.log("Switching to fallback image:", fallback);
+      console.log("[Image Debug] Switching to primary fallback:", fallback);
       setProfileImgSrc(fallback);
       setMainImageFailed(true);
+    } else if (profileImgSrc !== secondaryFallback) {
+      console.log("[Image Debug] Switching to secondary fallback (GitHub Avatar):", secondaryFallback);
+      setProfileImgSrc(secondaryFallback);
+      setMainImageFailed(true);
+    } else {
+      console.error("[Image Debug] All image fallbacks failed.");
     }
   };
 
@@ -173,7 +189,7 @@ export default function App() {
                 alt={portfolio.fullName}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                 onError={handleImageError}
-                referrerPolicy="no-referrer"
+                crossOrigin="anonymous"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
               <div className="absolute bottom-8 left-8">
