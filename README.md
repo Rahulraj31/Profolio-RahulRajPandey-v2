@@ -1,4 +1,4 @@
-# Rahul Raj Pandey - Professional Portfolio (v18)
+# Rahul Raj Pandey - Professional Portfolio (v25)
 
 A modern, high-performance professional portfolio built with **React**, **Vite**, and **Tailwind CSS**. This portfolio is designed to be content-driven, using a YAML configuration for easy updates without touching the code.
 
@@ -28,10 +28,9 @@ A modern, high-performance professional portfolio built with **React**, **Vite**
 
 ```text
 ├── public/
-│   └── portfolio.yaml      # Main content configuration (Edit this!)
+│   ├── portfolio.yaml      # Main content configuration (Edit this!)
+│   └── profile.jpg         # Profile image (Served from public/)
 ├── src/
-│   ├── assets/
-│   │   └── profile.jpg     # Profile image (Bundled for reliability)
 │   ├── components/         # Reusable UI components
 │   ├── App.tsx             # Main application logic
 │   ├── index.css           # Global styles & Tailwind imports
@@ -77,7 +76,7 @@ bio: "Cloud Solution Engineer dedicated to building scalable..."
 ```
 
 ### 2. Profile Image
-To update your profile photo, replace the image at `src/assets/profile.jpg`. The application imports this file directly to ensure it is correctly bundled and served across all environments (Vercel, GitHub Pages, etc.).
+To update your profile photo, replace the image at `public/profile.jpg`. The application uses a root-relative path to ensure it is correctly served across all environments (Vercel, GitHub Pages, etc.).
 
 ## 🚢 Deployment (Vercel)
 

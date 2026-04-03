@@ -13,9 +13,8 @@ import ArticleCard from "./components/ArticleCard";
 import ExperienceItem from "./components/ExperienceItem";
 import { PortfolioData } from "./types";
 import yaml from "js-yaml";
-import profilePic from "./assets/profile.jpg";
 
-console.log("App Version: v19");
+console.log("App Version: v25");
 
 export default function App() {
   const [data, setData] = useState<PortfolioData | null>(null);
@@ -137,10 +136,11 @@ export default function App() {
           <div className="relative">
             <div className="absolute -inset-4 bg-brand-500/10 rounded-[2.5rem] blur-3xl" />
             <div className="relative glass rounded-[2.5rem] overflow-hidden aspect-[4/5] group hover:border-brand-500/50 hover:shadow-[0_0_40px_rgba(14,165,233,0.25)] transition-all duration-700">
-              <img 
-                src={profilePic} 
-                alt={portfolio.fullName}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+              <div 
+                className="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                style={{ backgroundImage: 'url(/profile.jpg)' }}
+                role="img"
+                aria-label={portfolio.fullName}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80" />
               <div className="absolute bottom-8 left-8">
