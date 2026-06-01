@@ -70,12 +70,16 @@ experience:
       - "Worked on advanced signal processing and image enhancement techniques for defense applications."
 
 articles:
+  - title: "Google ADK + LangSmith: Comparing AI Observability with Datadog and Google Native Tooling"
+    date: "2026"
+    summary: "understanding the three layers of observability and LangSmith tracing with Google ADK."
+    link: "https://medium.com/google-cloud/google-adk-langsmith-comparing-ai-observability-with-datadog-and-google-native-tooling-f1e96381bfb3"
   - title: "Beyond the Hype: Building Self-Route Architecture with Gemini and the Google ADK"
-    date: "2024"
+    date: "2026"
     summary: "A technical deep dive into building intelligent routing systems using Gemini's multimodal capabilities."
     link: "https://medium.com/google-cloud/beyond-the-hype-building-self-route-architecture-with-gemini-and-the-google-adk-0c5ed875df1b"
   - title: "Automating Google Cloud Access Audits: A Serverless Approach"
-    date: "2024"
+    date: "2026"
     summary: "How to leverage serverless functions to automate complex security audits on GCP."
     link: "https://medium.com/google-cloud/automating-google-cloud-access-audits-a-serverless-approach-a21ff802c4a4"
   - title: "Is RAG Dead? The Case for Long Context Windows in 2026"
