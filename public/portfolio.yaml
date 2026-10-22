@@ -2,8 +2,8 @@
 # Update this file to change any content on the website
 
 fullName: "Rahul Raj Pandey"
-shortRole: "7x Google Cloud Architect"
-headline: "AI/ML Engineer @ Econz | 7x Certified Professional | Cloud Solutions | Agentic AI"
+shortRole: "AI/ML & GenAI Solutions Engineer "
+headline: "AI Manager | GTM - Sales Analytics @ Zscaler | 7x Certified Professional | Cloud Solutions | Agentic AI"
 bio: "Cloud Solution Engineer dedicated to building scalable, intelligent infrastructure. From driving Presales conversations to leading end-to-end technical delivery, I focus on designing Agentic solutions that solve real-world business challenges at scale."
 
 skills:
@@ -39,9 +39,16 @@ skills:
     - "Deep Learning with TensorFlow - IBM"
 
 experience:
+  - company: "AI Manager | GTM - Sales Analytics"
+    role: "AI-ML Engineer"
+    dates: "Oct 2026 - Present"
+    achievements:
+      - "Spearheading the architectural design and development of innovative AI/ML and Generative/Agentic AI solutions for GTM."
+      - "Collaborating with cross-functional teams to develop tailored solutions that drive measurable business results and ROI."
+
   - company: "Econz IT Services"
     role: "AI-ML Engineer"
-    dates: "Jul 2024 - Present"
+    dates: "Jul 2024 - May 2026"
     achievements:
       - "Spearheading the architectural design and development of innovative AI/ML and Generative AI solutions on Google Cloud Platform (GCP)."
       - "Leading cross-functional teams to develop tailored AI/ML solutions that drive measurable business results and ROI."
